@@ -36,7 +36,7 @@ NeurIPS 2024 (Oral)
 | Tasks          | Model         | Backbone  | Dataset     | Metric | Baseline | +_DenoiseRep_ |
 |:--------------:|:-------------:|:---------:|:-----------:|:------:|:--------:|:-------------:|
 | Classification | ViT         | ViT patch=4  | Cifar-10 | acc@1  | 85.6%   | 86.2% [(model)](https://drive.google.com/file/d/1exsexxqnoG7hwifh4GkFtO6XO_HEq3U8/view?usp=sharing)       |
-| Person-ReID    | TransReID-SSL | ViT-S     | MSMT17      | mAP    | 66.3%   | 67.3% [(model)](https://drive.google.com/file/d/1ZSSylQTMg9zxHukVDBhZevIprybByuMl/view?usp=sharing)        |
+| Person-ReID    | TransReID-SSL | ViT-S     | MSMT17      | mAP    | 66.3%   | 67.3% [(model)](https://drive.google.com/file/d/1ZSSylQTMg9zxHukVDBhZevIprybByuMl/view?usp=sharing)[(log)](https://drive.google.com/file/d/1gUaHBKB3ED4-vf8RkuNOiLwNtg9NIdWU/view?usp=sharing)       |
 
 
 

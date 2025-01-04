@@ -6,6 +6,12 @@ We apply our proposed [DenoiseRep](../../denoiserep_op/) to [TransReID-SSL](http
 
 
 ## Experimental Results
+| **Dataset**          | DukeMTMC         | MSMT                   | Market-1501           | CUHK03-L               |
+|----------------------|-------------------|------------------------|------------------------|------------------------|
+| **TransReID-SSL**         | 81.2%[(model)](https://drive.google.com/file/d/1imEaz1TiPECUddCgqRAgFKdZu1TpGiUO/view?usp=sharing)           | 66.3%[(model)](https://drive.google.com/file/d/1tptfrUg2mxKBwn3PLWU_JMBdbK3NfuQf/view?usp=sharing)                 | 91.2%[(model)](https://drive.google.com/file/d/1o4syrjVyUHRbO7Mgq-xZnjlfEVVufEcF/view?usp=sharing)           | 83.4%[(model)](https://drive.google.com/file/d/12x0pzDrg1GSy1mv-7m_cYnXJAJWHDcE0/view?usp=sharing)                |
+| **+_DenoiseRep_** | **82.1%[(model)](https://drive.google.com/file/d/1KKPzh4ABSkrS8n5uLHY9ypZMiO4NmqMo/view?usp=sharing)**    | **67.3%[(model)](https://drive.google.com/file/d/1ZSSylQTMg9zxHukVDBhZevIprybByuMl/view?usp=sharing)**             | **91.9%[(model)](https://drive.google.com/file/d/1-MvY3MWAgHvb_O4r1oDBUNTUnB4hIaFz/view?usp=sharing)**            | **84.6%[(model)](https://drive.google.com/file/d/1YU0ELebkzKpq8FfO7w0ydr4wZX3_66mg/view?usp=sharing)**             |
+
+If you want to train a baseline model yourself, you can refer to [TransReID-SSL](https://github.com/damo-cv/TransReID-SSL/).
 
 ## Requirements
 
@@ -51,17 +57,17 @@ data
 │   └── ..
 ```
 
-## Pre-trained Models
+<!-- ## Pre-trained Models
 Please download the pre-trained models and put them into your custom file folder.
 | Model         | Download |
 | :------:      | :------: |
 | ViT-S/16      | [link (coming soom)]() |
-| ViT-B/16+ICS  | [link (coming soom)]() |
+| ViT-B/16+ICS  | [link (coming soom)]() | -->
 
 ## Training
 
-### Load the trained model
-You need to load the trained model before starting to train DenoiseRep.
+### Load the model after training the baseline pipeline
+You need to load the trained model before starting to train DenoiseRep. The model can be downloaded from the table above.
 ```bash
 # transreid_pytorch/train.py:L75
 model.load_param("/pretrain_model_path")

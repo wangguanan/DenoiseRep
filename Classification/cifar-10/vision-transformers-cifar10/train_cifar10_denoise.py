@@ -250,7 +250,7 @@ if usewandb:
     wandb.watch(net)
     
 for epoch in range(start_epoch, args.n_epochs):
-    if ((epoch) % 10):
+    if (epoch % 10 == 0):
             if ((epoch / 10) % 2):
                 freeze_denoise_layers(net)
             else:

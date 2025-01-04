@@ -41,8 +41,9 @@ def do_train(cfg,
     evaluator = R1_mAP_eval(num_query, max_rank=50, feat_norm=cfg.TEST.FEAT_NORM)
     scaler = amp.GradScaler()
     # train
+    unfreeze_denoise_layers(model)
     for epoch in range(1, epochs + 1):
-        if ((epoch - 1) % cfg.TRAIN.FT_EPOCH):
+        if (epoch % cfg.TRAIN.FT_EPOCH == 0):
             if ((epoch / cfg.TRAIN.FT_EPOCH) % 2):
                 freeze_denoise_layers(model)
             else:
